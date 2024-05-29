@@ -29,7 +29,7 @@ function Card({ children }: { children: React.ReactNode }) {
 export default function Index() {
 	return (
 		<>
-			<header className=" mb-32 flex flex-row items-center border-b-2 px-24 py-4">
+			<header className=" bg-linen sticky top-0 mb-32 flex flex-row items-center border-b-2 px-24 py-4">
 				<h1 className="font-display text-2xl font-bold uppercase">Crassly</h1>
 				<nav className="flex-grow">
 					<ul className="flex flex-row items-center justify-end gap-5">
