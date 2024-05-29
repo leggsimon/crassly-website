@@ -1,10 +1,12 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
 	content: ['./app/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		fontFamily: {
 			display: ['Rowdies', 'sans-serif'],
+			body: ['"Nunito"', ...fontFamily.sans],
 		},
 		colors: {
 			transparent: 'transparent',
