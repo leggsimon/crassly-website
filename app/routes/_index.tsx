@@ -12,16 +12,24 @@ export const meta: MetaFunction = () => {
 
 function Button({ children }: { children: React.ReactNode }) {
 	return (
-		<button className="bg-orange hover:bg-sand focus:bg-sand border-2 border-black px-6 py-2 text-sm font-bold shadow-md">
+		<button className="bg-orange hover:bg-sand focus:bg-sand border-3 border-black px-6 py-2 text-sm font-bold shadow-md">
 			{children}
 		</button>
+	);
+}
+
+function Card({ children }: { children: React.ReactNode }) {
+	return (
+		<div className="bg-linen border-3 flex flex-col border-black p-6 pb-8 shadow-xl">
+			{children}
+		</div>
 	);
 }
 
 export default function Index() {
 	return (
 		<>
-			<header className="mb-32 flex flex-row items-center border-b-2 py-4">
+			<header className=" mb-32 flex flex-row items-center border-b-2 px-24 py-4">
 				<h1 className="font-display text-2xl font-bold uppercase">Crassly</h1>
 				<nav className="flex-grow">
 					<ul className="flex flex-row items-center justify-end gap-5">
@@ -48,7 +56,7 @@ export default function Index() {
 				</nav>
 			</header>
 			<main>
-				<section className="bg-linen">
+				<section className="bg-linen px-24">
 					<div className="max-w-full lg:max-w-[60%]">
 						<h2 className="font-display my-6 text-5xl font-bold leading-tight">
 							Access Management for your SaaS applications
@@ -76,39 +84,62 @@ export default function Index() {
 					</div>
 				</section>
 				<section className="bg-white px-24 py-16">
-					<p>Automating access management & Compilance at</p>
+					<div className="flex w-full flex-col items-center">
+						<p className="text-sm">
+							Automating access management & Compilance at
+						</p>
+						<ul className="my-4 flex flex-wrap items-center gap-10">
+							{['viafintech', 'ZEPLIN', 'Contentfly', 'DREAM'].map(
+								(companyName) => {
+									return (
+										<li
+											key={companyName}
+											className="font-display text-5xl font-light"
+										>
+											{companyName}
+										</li>
+									);
+								},
+							)}
+						</ul>
+					</div>
 
-					<div>
-						<div className="card">
-							<h3>Automate on- & offboarding workflows</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-								laudantium odit, ipsum commodi sed inventore architecto
-								repudiandae temporibus neque, aliquam illo quam quod quo, vitae
-								quibusdam deleniti tempore. Nostrum, vitae?
-							</p>
-							<a href="#">Read more ›</a>
-						</div>
-						<div className="card">
-							<h3>Make you auditors happy</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-								laudantium odit, ipsum commodi sed inventore architecto
-								repudiandae temporibus neque, aliquam illo quam quod quo, vitae
-								quibusdam deleniti tempore. Nostrum, vitae?
-							</p>
-							<a href="#">Read more ›</a>
-						</div>
-						<div className="card">
-							<h3>Simplify approval workflows</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-								laudantium odit, ipsum commodi sed inventore architecto
-								repudiandae temporibus neque, aliquam illo quam quod quo, vitae
-								quibusdam deleniti tempore. Nostrum, vitae?
-							</p>
-							<a href="#">Read more ›</a>
-						</div>
+					<div className="my-24 flex flex-row gap-8">
+						{[
+							{
+								title: 'Automate on- & offboarding workflows',
+								icon: <div className="bg-casal size-12 rounded-full"></div>,
+								description:
+									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque laudantium odit, ipsum commodi sed inventore architecto repudiandae temporibus neque, aliquam illo quam quod quo, vitae quibusdam deleniti tempore. Nostrum, vitae?',
+							},
+							{
+								title: 'Make your auditors happy',
+								icon: <div className="bg-orange size-12 rounded-full"></div>,
+								description:
+									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque laudantium odit, ipsum commodi sed inventore architecto repudiandae temporibus neque, aliquam illo quam quod quo, vitae quibusdam deleniti tempore. Nostrum, vitae?',
+							},
+							{
+								title: 'Simplify approval workflows',
+								icon: <div className="bg-lavender size-12 rounded-full"></div>,
+								description:
+									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque laudantium odit, ipsum commodi sed inventore architecto repudiandae temporibus neque, aliquam illo quam quod quo, vitae quibusdam deleniti tempore. Nostrum, vitae?',
+							},
+						].map(({ title, description, icon }) => {
+							return (
+								<Card key={title}>
+									<div className="">{icon}</div>
+									<h3 className="font-display mb-4 mr-4 mt-8 text-xl font-bold">
+										{title}
+									</h3>
+									<p className="text-casal flex-grow text-xs leading-relaxed">
+										{description}
+									</p>
+									<a className="mt-6 text-xs font-bold" href="#">
+										Read more ›
+									</a>
+								</Card>
+							);
+						})}
 					</div>
 				</section>
 			</main>
