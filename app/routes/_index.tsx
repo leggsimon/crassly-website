@@ -10,6 +10,14 @@ export const meta: MetaFunction = () => {
 	];
 };
 
+function Button({ children }: { children: React.ReactNode }) {
+	return (
+		<button className="bg-orange hover:bg-sand focus:bg-sand border-2 border-black px-6 py-2 text-sm font-bold shadow-md">
+			{children}
+		</button>
+	);
+}
+
 export default function Index() {
 	return (
 		<>
@@ -34,40 +42,44 @@ export default function Index() {
 							</li>
 						))}
 						<li className="ml-2">
-							<button className="bg-orange hover:bg-sand focus:bg-sand border-2 border-black px-6 py-2 text-sm font-bold shadow-md">
-								Start for free
-							</button>
+							<Button>Start for free</Button>
 						</li>
 					</ul>
 				</nav>
 			</header>
 			<main>
-				<section>
-					<h2>Access management for your SaaS applications</h2>
-					<p>
-						Orchestrate your employees’ access to SaaS tools – right in Slack.
-						Automate access requests, approvals and provisioning workflows.
-					</p>
-					<div>
-						<button>Add to Slack</button>
-						<a href="#">Learn more</a>
-					</div>
+				<section className="bg-linen">
+					<div className="max-w-full lg:max-w-[60%]">
+						<h2 className="font-display my-6 text-5xl font-bold leading-tight">
+							Access Management for your SaaS applications
+						</h2>
+						<p className="text-casal max-w-[60%] text-xs leading-relaxed">
+							Orchestrate your employees’ access to SaaS tools – right in Slack.
+							Automate access requests, approvals and provisioning workflows.
+						</p>
+						<div className="my-8 flex items-center gap-4">
+							<Button>Add to Slack</Button>
+							<a href="#" className="text-sm">
+								Learn more
+							</a>
+						</div>
 
-					<p>No credit card required </p>
-					<div>
-						<div></div>
-						<p>Hosted in Germany</p>
-					</div>
-					<div>
-						<div></div>
-						<p>Ready in minutes</p>
+						<p className="text-xs font-bold">No credit card required </p>
+						<div className="my-20 flex gap-8">
+							{['Hosted in Germany', 'Ready in minutes'].map((text) => (
+								<div key={text} className="flex items-center gap-2">
+									<div className="bg-orange h-8 w-8 rounded-full"></div>
+									<p className="text-xs font-bold">{text}</p>
+								</div>
+							))}
+						</div>
 					</div>
 				</section>
-				<section>
+				<section className="bg-white px-24 py-16">
 					<p>Automating access management & Compilance at</p>
 
 					<div>
-						<div>
+						<div className="card">
 							<h3>Automate on- & offboarding workflows</h3>
 							<p>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
@@ -77,7 +89,7 @@ export default function Index() {
 							</p>
 							<a href="#">Read more ›</a>
 						</div>
-						<div>
+						<div className="card">
 							<h3>Make you auditors happy</h3>
 							<p>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
@@ -87,7 +99,7 @@ export default function Index() {
 							</p>
 							<a href="#">Read more ›</a>
 						</div>
-						<div>
+						<div className="card">
 							<h3>Simplify approval workflows</h3>
 							<p>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
