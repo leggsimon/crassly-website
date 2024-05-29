@@ -48,6 +48,10 @@ module.exports = {
 					typescript: {},
 				},
 			},
+			rules: {
+				// Disable anchor-is-valid rule because this project doesn’t use real links
+				'jsx-a11y/anchor-is-valid': 'off',
+			},
 		},
 
 		// Typescript
