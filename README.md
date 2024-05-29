@@ -1,6 +1,8 @@
-# Welcome to Remix + Vite!
+# Carssly Website!
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+A practice site implementing [Ariful Islam’s](https://dribbble.com/uiuxdesignerarif) design for a generic Saas landing page
+
+![landing page design](docs/image.png)
 
 ## Development
 
