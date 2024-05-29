@@ -19,6 +19,12 @@ export default {
 			sand: '#FCE1AA',
 			peach: '#FEE3C6',
 		},
+		boxShadow: {
+			sm: '2px 2px 0 0 #000000;',
+			md: '4px 4px 0 0 #000000;',
+			lg: '8px 6px 0 0 #000000;',
+			xl: '12px 8px 0 0 #000000;',
+		},
 		extend: {},
 	},
 	plugins: [],

@@ -13,10 +13,10 @@ export const meta: MetaFunction = () => {
 export default function Index() {
 	return (
 		<>
-			<header>
-				<h1>Crassly</h1>
-				<nav>
-					<ul>
+			<header className="mb-32 flex flex-row items-center border-b-2 py-4">
+				<h1 className="font-display text-2xl font-bold uppercase">Crassly</h1>
+				<nav className="flex-grow">
+					<ul className="flex flex-row items-center justify-end gap-5">
 						{[
 							'How it works',
 							'Solutions',
@@ -25,11 +25,18 @@ export default function Index() {
 							'Get in touch',
 						].map((link) => (
 							<li key={link}>
-								<a href="#">{link}</a>
+								<a
+									href="#"
+									className="text-casal text-xs hover:text-black focus:text-black"
+								>
+									{link}
+								</a>
 							</li>
 						))}
-						<li>
-							<button>Start for free</button>
+						<li className="ml-2">
+							<button className="bg-orange hover:bg-sand focus:bg-sand border-2 border-black px-6 py-2 text-sm font-bold shadow-md">
+								Start for free
+							</button>
 						</li>
 					</ul>
 				</nav>
