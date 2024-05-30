@@ -142,6 +142,58 @@ export default function Index() {
 						})}
 					</div>
 				</section>
+				<section className="bg-sand px-24 py-16">
+					<div className="grid grid-cols-2 gap-16">
+						<div className="flex justify-center">
+							<Card>
+								<p>Blah</p>
+							</Card>
+						</div>
+						<div>
+							<h3 className="font-display mb-4 text-3xl">
+								Get approval for access changes
+							</h3>
+							<p className="text-casal text-xs leading-relaxed">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+								enim ullam aliquid perferendis mollitia nihil cumque molestiae
+								hic, incidunt soluta deleniti temporibus laboriosam vel cum quod
+								tenetur, recusandae accusantium neque.
+							</p>
+						</div>
+						<div>
+							<h3 className="font-display mb-4 text-3xl">
+								User is onboarded, offboarded or requests new access themself
+							</h3>
+							<p className="text-casal text-xs leading-relaxed">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+								enim ullam aliquid perferendis mollitia nihil cumque molestiae
+								hic, incidunt soluta deleniti temporibus laboriosam vel cum quod
+								tenetur, recusandae accusantium neque.
+							</p>
+						</div>
+						<div className="flex justify-center">
+							<Card>
+								<p>Blah</p>
+							</Card>
+						</div>
+						<div className="flex justify-center">
+							<Card>
+								<p>Blah</p>
+							</Card>
+						</div>
+						<div>
+							<h3 className="font-display mb-4 text-3xl">
+								Provision access with AccessOwl
+							</h3>
+							<p className="text-casal text-xs leading-relaxed">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+								enim ullam aliquid perferendis mollitia nihil cumque molestiae
+								hic, incidunt soluta deleniti temporibus laboriosam vel cum quod
+								tenetur, recusandae accusantium neque.
+							</p>
+						</div>
+					</div>
+				</section>
 			</main>
 		</>
 	);
