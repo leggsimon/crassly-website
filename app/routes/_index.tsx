@@ -194,6 +194,71 @@ export default function Index() {
 						</div>
 					</div>
 				</section>
+				<section className="bg-linen flex flex-col items-center px-24 py-16">
+					<h2 className="font-display py-6 text-3xl">
+						Comparison with the leading provisioning provider
+					</h2>
+					<table className="border-3 border-black">
+						<thead className="bg-orange font-display border-3 border-black text-lg font-bold">
+							<tr>
+								<td></td>
+								<td className="p-2">Crassly</td>
+								<td className="p-2">Okay!</td>
+							</tr>
+						</thead>
+						<tbody>
+							{[
+								{ feature: 'Tool Discovery', crassly: 'Yes', okay: 'No' },
+								{
+									feature: 'App Provisioning',
+									crassly: 'Yes',
+									okay: 'If SAML is supported',
+								},
+								{
+									feature: 'SOC2 & ISO27001 compliant access management',
+									crassly: 'Yes',
+									okay: 'Yes',
+								},
+								{ feature: 'Access Reviews', crassly: 'Yes', okay: 'No' },
+								{
+									feature: 'Access Reports',
+									crassly: 'Yes',
+									okay: 'For last 90 days only',
+								},
+								{
+									feature: 'Identity Provider (SSO)',
+									crassly: 'No (we recommend Google SSO)',
+									okay: 'Yes',
+								},
+								{
+									feature: 'Workflows',
+									crassly: 'Ad-hoc Request, Approval, On & Offboarding',
+									okay: 'Via custom scripts only',
+								},
+								{
+									feature: 'Employee Interface',
+									crassly: 'Slack or Teams (coming soon)',
+									okay: 'Via Web App only',
+								},
+								{
+									feature: 'Setup Time',
+									crassly: '< 1hr',
+									okay: 'Weeks - months',
+								},
+							].map((row) => {
+								const { feature, crassly, okay } = row;
+
+								return (
+									<tr key={feature} className="border-casal/15 border-b">
+										<td className="p-4 text-sm font-bold">{feature}</td>
+										<td className="p-4 text-sm">{crassly}</td>
+										<td className="p-4 text-sm">{okay}</td>
+									</tr>
+								);
+							})}
+						</tbody>
+					</table>
+				</section>
 			</main>
 		</>
 	);
